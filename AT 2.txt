@@ -1,0 +1,125 @@
+2)
+//Guilherme Enis
+#include <stdio.h>
+
+float mediaTurma(int alunos[], int numAlunos) {
+    int soma = 0;
+    for (int i = 0; i < numAlunos; i++) {
+        soma += alunos[i];
+    }
+    return (float) soma / numAlunos;
+}
+
+float mediaEscola(int numTurmas) {
+    int totalAlunos = 0, somaTurmas = 0;
+    for (int i = 0; i < numTurmas; i++) {
+        int numAlunos;
+        printf("Digite o número de alunos da turma %d: ", i + 1);
+        scanf("%d", &numAlunos);
+        totalAlunos += numAlunos;
+        int alunos[numAlunos];
+        for (int j = 0; j < numAlunos; j++) {
+            printf("Digite a nota do aluno %d da turma %d: ", j + 1, i + 1);
+            scanf("%d", &alunos[j]);
+        }
+        float media = mediaTurma(alunos, numAlunos);
+        printf("Média da turma %d: %.2f\n", i + 1, media);
+        somaTurmas += media;
+    }
+    return (float) somaTurmas / numTurmas;
+}
+
+int main() {
+    int numTurmas;
+    printf("Digite o número de turmas: ");
+    scanf("%d", &numTurmas);
+    printf("Média geral da escola: %.2f\n", mediaEscola(numTurmas));
+    return 0;
+}
+// Achei difícil trabalhar com arrays de tamanho variável para armazenar notas de alunos. Tive dificuldade em calcular as médias de várias turmas e depois uma média geral, mantendo a organização.
+5)
+
+// Guilherme Enis
+#include <stdio.h>
+
+int soma(int a, int b);
+
+int main() {
+    int num1, num2;
+
+    printf("Digite o primeiro número inteiro: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo número inteiro: ");
+    scanf("%d", &num2);
+
+    int resultado = soma(num1, num2);
+    printf("A soma de %d e %d é: %d\n", num1, num2, resultado);
+
+    return 0;
+}
+
+int soma(int a, int b) {
+    return a + b;
+}
+
+// Não tive dificuldade 
+
+
+
+6)
+
+// Guilherme Enis
+#include <stdio.h>
+
+int maior(int a, int b);
+
+int main() {
+    int num1, num2;
+
+    printf("Digite o primeiro número inteiro: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo número inteiro: ");
+    scanf("%d", &num2);
+
+    int resultado = maior(num1, num2);
+    printf("O maior número entre %d e %d é: %d\n", num1, num2, resultado);
+
+    return 0;
+}
+
+int maior(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+
+7)
+
+// Guilherme Enis
+#include <stdio.h>
+
+int somaVetor(int vetor[], int tamanho);
+
+int main() {
+    int vetor[3];
+
+    for (int i = 0; i < 3; i++) {
+        printf("Digite o número inteiro %d: ", i + 1);
+        scanf("%d", &vetor[i]);
+    }
+
+    int resultado = somaVetor(vetor, 3);
+    printf("A soma dos valores do vetor é: %d\n", resultado);
+
+    return 0;
+}
+
+int somaVetor(int vetor[], int tamanho) {
+    int soma = 0;
+    for (int i = 0; i < tamanho; i++) {
+        soma += vetor[i];
+    }
+    return soma;
+}
+// Trabalhar com vetor foi um pouco dificil
